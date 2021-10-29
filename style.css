@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #242121;
+}
+
+button {
+    position: relative;
+    margin: 0 15px;
+    width: 180px;
+    height: 50px;
+    line-height: 40px;
+    font: 20px sans-serif;
+    letter-spacing: 1px;
+    background: transparent;
+    color: #eeeeee;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+button:nth-child(1):hover {
+    color: #40f11c;
+}
+
+button:nth-child(2):hover {
+    color: #ff2781;
+}
+
+button:nth-child(3):hover {
+    color: #00d9ff;
+}
+
+span {
+    position: absolute;
+    opacity: .4s;
+    transition: all .4s;
+}
+
+button:nth-child(1) span {
+    background: #40f11c;
+    box-shadow: 0 0 20px #40f11c;
+}
+
+button:nth-child(2) span {
+    background: #ff2781;
+    box-shadow: 0 0 20px #ff2781;
+}
+
+button:nth-child(3) span {
+    background: #00d9ff;
+    box-shadow: 0 0 20px #00d9ff;
+}
+
+button span:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+}
+
+button span:nth-child(2) {
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 0%;
+}
+
+button span:nth-child(3) {
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 1px;
+}
+
+button span:nth-child(4) {
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    height: 0%;
+}
+
+button:hover span:nth-child(1),
+button:hover span:nth-child(3) {
+    width: 100%;
+    opacity: 1;
+}
+
+button:hover span:nth-child(2),
+button:hover span:nth-child(4) {
+    height: 100%;
+    opacity: 1;
+}
